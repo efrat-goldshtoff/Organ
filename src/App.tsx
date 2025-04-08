@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import './App.css'
-import Organ from './components/Organ'
+import { Organ1, Organ2 } from './components/Organ';
 
 function App() {
 
@@ -23,12 +24,17 @@ function App() {
 
   setEmojiFavicon("🎹");
 
+  const [bt, setBt] = useState(true);
   return (
     <>
- <div className="App">
-      <h1>אורגן</h1>
-      <Organ/>
-    </div>
+      <div className="App">
+        <h1>אורגן</h1>
+        <button onClick={() => setBt(true)}>option one</button>
+        <button onClick={() => setBt(false)}>option two</button>
+        {bt && <Organ1 />}
+        {!bt && <Organ2 />}
+
+      </div>
     </>
   )
 }
