@@ -332,6 +332,7 @@ export const Organ2 = () => {
 
     // עיצוב הקלידים (לבנים ושחורים)
     const renderKey = (key: string, index: number) => {
+        {index}
         const isBlackKey = ['w', 'e', 't', 'y', 'u', 'o', 'p', ';', "'", '[', ']', '\\'].includes(key);
         return (
             <div
